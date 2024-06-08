@@ -1,0 +1,499 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A2560912-15C9-473F-A898-458D71433778}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Well_Health_Gym_Application</RootNamespace>
+    <AssemblyName>Well_Health_Gym_Application</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Crystal_Report\cr_Employee_List.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_Employee_List.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Crystal_Report\cr_Expence_List.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_Expence_List.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Crystal_Report\cr_Equipment_List.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_Equipment_List.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Crystal_Report\cr_Member_Bill.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_Member_Bill.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Crystal_Report\cr_Member_List.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_Member_List.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Crystal_Report\cr_Trainer_List.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_Trainer_List.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data_Sets\DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data_Sets\Member_Bill.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Member_Bill.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employee\Frm_Add_New_Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Employee\Frm_Add_New_Employee.Designer.cs">
+      <DependentUpon>Frm_Add_New_Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employee\Frm_Update_Employee_Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Employee\Frm_Update_Employee_Details.Designer.cs">
+      <DependentUpon>Frm_Update_Employee_Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employee\Frm_View_Employee_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Employee\Frm_View_Employee_List.Designer.cs">
+      <DependentUpon>Frm_View_Employee_List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Enquiry\Frm_Enquiry_Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Enquiry\Frm_Enquiry_Details.Designer.cs">
+      <DependentUpon>Frm_Enquiry_Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Enquiry\Frm_Enquiry_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Enquiry\Frm_Enquiry_List.Designer.cs">
+      <DependentUpon>Frm_Enquiry_List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Equipment\Frm_Add_Equipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Equipment\Frm_Add_Equipment.Designer.cs">
+      <DependentUpon>Frm_Add_Equipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Equipment\Frm_View_Equipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Equipment\Frm_View_Equipment.Designer.cs">
+      <DependentUpon>Frm_View_Equipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Expence\Frm_Add_Expence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Expence\Frm_Add_Expence.Designer.cs">
+      <DependentUpon>Frm_Add_Expence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Expence\Frm_View_Expence_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Expence\Frm_View_Expence_List.Designer.cs">
+      <DependentUpon>Frm_View_Expence_List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_Loading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Loading.Designer.cs">
+      <DependentUpon>Frm_Loading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Login.Designer.cs">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Main.Designer.cs">
+      <DependentUpon>Frm_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Global_Vars.cs" />
+    <Compile Include="Forms\Member\Frm_Add_New_Members.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Member\Frm_Add_New_Members.Designer.cs">
+      <DependentUpon>Frm_Add_New_Members.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Member\Frm_Update_New_Members.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Member\Frm_Update_New_Members.Designer.cs">
+      <DependentUpon>Frm_Update_New_Members.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Member\Frm_View_Member.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Member\Frm_View_Member.Designer.cs">
+      <DependentUpon>Frm_View_Member.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Package\Frm_Add_New_Package.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Package\Frm_Add_New_Package.Designer.cs">
+      <DependentUpon>Frm_Add_New_Package.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Package\Frm_Package_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Package\Frm_Package_List.Designer.cs">
+      <DependentUpon>Frm_Package_List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Package\Frm_Update_Package.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Package\Frm_Update_Package.Designer.cs">
+      <DependentUpon>Frm_Update_Package.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Payment\Frm_Accept_Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Payment\Frm_Accept_Payment.Designer.cs">
+      <DependentUpon>Frm_Accept_Payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Payment\Frm_Search_And_Accept_Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Payment\Frm_Search_And_Accept_Payment.Designer.cs">
+      <DependentUpon>Frm_Search_And_Accept_Payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Payment\Frm_View_Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Payment\Frm_View_Payment.Designer.cs">
+      <DependentUpon>Frm_View_Payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Trainer\Frm_Add_New_Trainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Trainer\Frm_Add_New_Trainer.Designer.cs">
+      <DependentUpon>Frm_Add_New_Trainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Trainer\Frm_Update_Trainer_Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Trainer\Frm_Update_Trainer_Details.Designer.cs">
+      <DependentUpon>Frm_Update_Trainer_Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Trainer\Frm_View_Trainer_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Trainer\Frm_View_Trainer_List.Designer.cs">
+      <DependentUpon>Frm_View_Trainer_List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\User\Frm_Add_User_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\User\Frm_Add_User_Management.Designer.cs">
+      <DependentUpon>Frm_Add_User_Management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\User\Frm_Delete_User_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\User\Frm_Delete_User_Management.Designer.cs">
+      <DependentUpon>Frm_Delete_User_Management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\User\Frm_Update_User_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\User\Frm_Update_User_Management.Designer.cs">
+      <DependentUpon>Frm_Update_User_Management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Well_Health_Gym_App_Shared_Content.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report_Forms\Frm_Employee_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report_Forms\Frm_Employee_Report.Designer.cs">
+      <DependentUpon>Frm_Employee_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Forms\Frm_Equipment_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report_Forms\Frm_Equipment_Report.Designer.cs">
+      <DependentUpon>Frm_Equipment_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Forms\Frm_Expense_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report_Forms\Frm_Expense_Report.Designer.cs">
+      <DependentUpon>Frm_Expense_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Forms\Frm_Member_Bill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report_Forms\Frm_Member_Bill.Designer.cs">
+      <DependentUpon>Frm_Member_Bill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Forms\Frm_Member_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report_Forms\Frm_Member_Report.Designer.cs">
+      <DependentUpon>Frm_Member_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Forms\Frm_Report_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report_Forms\Frm_Report_Main.Designer.cs">
+      <DependentUpon>Frm_Report_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Forms\Frm_Trainer_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report_Forms\Frm_Trainer_Report.Designer.cs">
+      <DependentUpon>Frm_Trainer_Report.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Crystal_Report\cr_Employee_List.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_Employee_List.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crystal_Report\cr_Expence_List.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_Expence_List.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crystal_Report\cr_Equipment_List.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_Equipment_List.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crystal_Report\cr_Member_Bill.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_Member_Bill.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crystal_Report\cr_Member_List.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_Member_List.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crystal_Report\cr_Trainer_List.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_Trainer_List.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Employee\Frm_Add_New_Employee.resx">
+      <DependentUpon>Frm_Add_New_Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Employee\Frm_Update_Employee_Details.resx">
+      <DependentUpon>Frm_Update_Employee_Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Employee\Frm_View_Employee_List.resx">
+      <DependentUpon>Frm_View_Employee_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Enquiry\Frm_Enquiry_Details.resx">
+      <DependentUpon>Frm_Enquiry_Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Enquiry\Frm_Enquiry_List.resx">
+      <DependentUpon>Frm_Enquiry_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Equipment\Frm_Add_Equipment.resx">
+      <DependentUpon>Frm_Add_Equipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Equipment\Frm_View_Equipment.resx">
+      <DependentUpon>Frm_View_Equipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Expence\Frm_Add_Expence.resx">
+      <DependentUpon>Frm_Add_Expence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Expence\Frm_View_Expence_List.resx">
+      <DependentUpon>Frm_View_Expence_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Loading.resx">
+      <DependentUpon>Frm_Loading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Login.resx">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Main.resx">
+      <DependentUpon>Frm_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Member\Frm_Add_New_Members.resx">
+      <DependentUpon>Frm_Add_New_Members.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Member\Frm_Update_New_Members.resx">
+      <DependentUpon>Frm_Update_New_Members.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Member\Frm_View_Member.resx">
+      <DependentUpon>Frm_View_Member.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Package\Frm_Add_New_Package.resx">
+      <DependentUpon>Frm_Add_New_Package.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Package\Frm_Package_List.resx">
+      <DependentUpon>Frm_Package_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Package\Frm_Update_Package.resx">
+      <DependentUpon>Frm_Update_Package.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Payment\Frm_Accept_Payment.resx">
+      <DependentUpon>Frm_Accept_Payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Payment\Frm_Search_And_Accept_Payment.resx">
+      <DependentUpon>Frm_Search_And_Accept_Payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Payment\Frm_View_Payment.resx">
+      <DependentUpon>Frm_View_Payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Trainer\Frm_Add_New_Trainer.resx">
+      <DependentUpon>Frm_Add_New_Trainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Trainer\Frm_Update_Trainer_Details.resx">
+      <DependentUpon>Frm_Update_Trainer_Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Trainer\Frm_View_Trainer_List.resx">
+      <DependentUpon>Frm_View_Trainer_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\User\Frm_Add_User_Management.resx">
+      <DependentUpon>Frm_Add_User_Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\User\Frm_Delete_User_Management.resx">
+      <DependentUpon>Frm_Delete_User_Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\User\Frm_Update_User_Management.resx">
+      <DependentUpon>Frm_Update_User_Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Forms\Frm_Employee_Report.resx">
+      <DependentUpon>Frm_Employee_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Forms\Frm_Equipment_Report.resx">
+      <DependentUpon>Frm_Equipment_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Forms\Frm_Expense_Report.resx">
+      <DependentUpon>Frm_Expense_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Forms\Frm_Member_Bill.resx">
+      <DependentUpon>Frm_Member_Bill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Forms\Frm_Member_Report.resx">
+      <DependentUpon>Frm_Member_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Forms\Frm_Report_Main.resx">
+      <DependentUpon>Frm_Report_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Forms\Frm_Trainer_Report.resx">
+      <DependentUpon>Frm_Trainer_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Data_Sets\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Data_Sets\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Data_Sets\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Data_Sets\Member_Bill.xsc">
+      <DependentUpon>Member_Bill.xsd</DependentUpon>
+    </None>
+    <None Include="Data_Sets\Member_Bill.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Member_Bill.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Data_Sets\Member_Bill.xss">
+      <DependentUpon>Member_Bill.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Equipment Image 1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Member.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Equipment image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Member1.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
